@@ -1,0 +1,14 @@
+pipeline
+{
+agent any
+
+stages
+{
+	stage('Build')
+	{
+		//commands to perform operation [bat -windoes,sh-linux]
+		mvn 'build'
+	}
+}
+
+}
