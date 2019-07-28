@@ -7,7 +7,31 @@ stages
 	stage('Build')
 	{
 		//commands to perform operation [bat -windoes,sh-linux]
-		mvn 'build'
+		bat mvn 'install'
+	}
+	
+	stage('deploy')
+	{
+		//commands to perform operation
+		echo 'mvn clean'
+	}
+	
+	stage('test')
+	{
+		//commands to perform operation
+		mvn test
+	}
+	
+	stage('unit test')
+	{
+		//commands to perform operation
+		bat mvn 'compile'
+	}
+	
+	stage('UI testing')
+	{
+		//commands to perform operation
+		bat mvn 'unit testing'
 	}
 }
 
